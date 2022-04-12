@@ -37,12 +37,11 @@ public class SvgElements {
                 "*[local-name()='g']/*[local-name()='rect']"));
 
         Actions ac = new Actions(driver);
-//        for (WebElement element : list) {
-//            ac.moveToElement(element).perform();
-//            String covidCases = driver.findElement(By.xpath("//div[@class='ExnoTd']")).getText();
-//            System.out.println(covidCases);
-//        }
-
+        for (WebElement element : list) {
+            ac.moveToElement(element).perform();
+            String covidCases = driver.findElement(By.xpath("//div[@class='ExnoTd']")).getText();
+            System.out.println(covidCases);
+        }
 
         //Tests
         WebElement element = driver.findElement(By.xpath("(//*[name()='svg' and @class='uch-psvg'])[2]"));
